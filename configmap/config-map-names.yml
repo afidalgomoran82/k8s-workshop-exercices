@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
    name: configmap-names-<your-name>
-   namespace: microservices
+   namespace: <correct_namespace>
 data:
   SURNAME: "Fidalgo"
   

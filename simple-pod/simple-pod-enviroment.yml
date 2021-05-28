@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: simple-pod-enviroment
+   namespace: microservices
+spec:
+  containers:
+     - name: simple-pod-container-enviroment
+       image: busybox
+       command: ["sh" , "-c", "echo My name is $NAME and my  surname is $SURNAME  && sleep $TIME_TO_COMPLETED"]
+       env:
+        - name : NAME
+          value: "Alvaro"
+        - name: SURNAME
+          value: "Fidalgo"
+        - name: TIME_TO_COMPLETED
+          value: "3600"

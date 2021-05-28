@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: simple-pod-alvaro
+   namespace: microservices
+spec:
+  containers:
+     - name: simple-pod-container
+       image: busybox
+       command: ["sh" , "-c", "echo My name is Alvaro and my surname is Fidalgo  && sleep 3600"]

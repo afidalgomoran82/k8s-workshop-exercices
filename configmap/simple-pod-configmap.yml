@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: simple-pod-configmap-<your-name>
+   namespace: microservices
+spec:
+  containers:
+     - name: simple-pod-configmap-container-enviroment
+       image: busybox
+       command: ["sh" , "-c", "echo My name is $NAME and my  surname is $SURNAME  && sleep $TIME_TO_COMPLETED"]
+       env:
+        - name : NAME
+          valueFrom: 
+             configMapKeyRef:
+               name: configmap-names-<your-name>
+               key: NAME
+        - name: TIME_TO_COMPLETED
+          valueFrom:
+             configMapKeyRef:
+               name: configmap-time-<your-name>
+               key: time
+ 

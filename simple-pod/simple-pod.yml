@@ -5,3 +5,13 @@ spec:
      - name: simple-pod-container
        image: busybox
        command: ["sh" , "-c", "echo My name is Alvaro and my surname is Fidalgo  && sleep 3600"]
+
+#In this file there is a problem
+# Solve this problem and read the log
+# Kubectl instructions
+#kubectl get pods -n <namespaces>
+#kubectl describe pod <pod-name> -n <namespace>
+#kubectl get pod <pod-name> -o yaml export ><localfile>
+#kubectl apply -f <descriptor-file>
+#Kubectl delete pod <pod-name> -n namespace
+#Kubectl logs  <pod-name> -n <namespace>
